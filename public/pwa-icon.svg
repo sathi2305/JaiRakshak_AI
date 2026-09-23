@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="dropGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#67e8f9" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer IoT telemetry pulses -->
+  <circle cx="256" cy="275" r="160" fill="none" stroke="url(#ringGrad)" stroke-width="4" stroke-dasharray="8 8" opacity="0.4" />
+  <circle cx="256" cy="275" r="195" fill="none" stroke="url(#ringGrad)" stroke-width="2" stroke-dasharray="14 10" opacity="0.25" />
+
+  <!-- Water Droplet Silhouette -->
+  <path d="M 256 95 C 256 95 150 220 150 305 C 150 365 197 415 256 415 C 315 415 362 365 362 305 C 362 220 256 95 256 95 Z"
+        fill="url(#dropGrad)"
+        filter="url(#glow)" />
+
+  <!-- Inner Water Wave / Network Flow -->
+  <path d="M 185 320 Q 220 290, 256 320 T 327 320 C 327 340 315 380 256 385 C 197 380 185 340 185 320 Z"
+        fill="#ffffff"
+        opacity="0.3" />
+
+  <!-- IoT Pulse Nodes -->
+  <circle cx="256" cy="225" r="8" fill="#ffffff" />
+  <circle cx="215" cy="295" r="6" fill="#ffffff" />
+  <circle cx="297" cy="295" r="6" fill="#ffffff" />
+  <line x1="256" y1="225" x2="215" y2="295" stroke="#ffffff" stroke-width="2.5" opacity="0.8" />
+  <line x1="256" y1="225" x2="297" y2="295" stroke="#ffffff" stroke-width="2.5" opacity="0.8" />
+  <line x1="215" y1="295" x2="297" y2="295" stroke="#ffffff" stroke-width="2.5" opacity="0.8" />
+</svg>

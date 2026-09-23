@@ -1,0 +1,6 @@
+{
+  "name": "JalRakshak AI",
+  "description": "Predict Water Loss. Prevent Waste. Protect Tomorrow. AI-Powered Water Conservation & Predictive Water Intelligence Platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
